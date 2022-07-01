@@ -72,3 +72,4 @@ def data_save(path,data):
     f = open(path,'w')
     json.dump(data,f)
     f.close()
+    

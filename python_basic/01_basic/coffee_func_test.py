@@ -6,7 +6,6 @@
 # - 메뉴삭제는 전체 목록을 보여주고 삭제하고자하는 항목을 선택하도록 해서 삭제 처리
 # - 메뉴목록은 메뉴이름순,메뉴가격순으로 정렬해서 보여줌.
 # - 종료는 메뉴 정보를 저장하고 종료합니다.
-
 import coffee_func as cf
 
 item = cf.data_load('python_basic/01_basic/item.json')
