@@ -30,5 +30,14 @@ def inputform():
         conn.close()
         return redirect('/')
 
+@app.route('/customerlist')
+def customerlist():
+    conn = sqlite3.connect(path + '/customer.db')
+    cur = conn.cursor()
+    cur.execute('select * from customer order by name')
+    data = cur.fetchall()
+    print(data)
+    return render_template('customerlist.html',data=data)
+
 if __name__ == '__main__':
     app.run(debug=True,port=80)
